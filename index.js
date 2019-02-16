@@ -21,7 +21,8 @@ function loadLocalImage(e) {
   reader.onload = function() {
     uploadImgSrc = reader.result;
     canvasDraw();
-  } reader.readAsDataURL(fileData);
+  };
+  reader.readAsDataURL(fileData);
 }
 
 file.addEventListener('change', loadLocalImage, false);
