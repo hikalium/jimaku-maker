@@ -66,17 +66,20 @@ function generate() {
 }
 
 function addText() {
-  var font_size = canvas.height / 20;
-  ctx.font = `bold ${font_size}px 'MS Pゴシック'`;
+  var font_size = canvas.height / 17;
+  ctx.font = `bold ${font_size}px cinecaption226`;
   ctx.textAlign = 'center';
   ctx.textBaseline = 'middle';
+  
+  ctx.strokeStyle = 'black';
+  ctx.strokeWidth = 1;
+  ctx.strokeText(
+      caption_text_box.value, canvas.width / 2,
+      canvas.height - font_size * 1.3);
+
   ctx.fillStyle = 'white';
   ctx.fillText(
       caption_text_box.value, canvas.width / 2,
-      canvas.height - font_size * 1.5);
-  ctx.strokeStyle = 'black';
-  ctx.strokeWidth = 2;
-  ctx.strokeText(
-      caption_text_box.value, canvas.width / 2,
-      canvas.height - font_size * 1.5);
+      canvas.height - font_size * 1.3);
+
 }
